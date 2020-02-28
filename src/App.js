@@ -5,7 +5,27 @@ const api = {
   base: "http://api.openweathermap.org/data/2.5/"
 }
 
+
+
 function App() {
+
+  function BGUpdate(weather) {
+    if (!weather) {
+      return 'App warm'
+    } else {
+
+      switch (true) {
+        case (weather.temp >= 70):
+          return 'App warm'
+        case (weather.temp >= 40):
+          return 'App'
+        default:
+          return 'App cold'
+      }
+    }
+  
+  
+  }
 
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
@@ -39,10 +59,12 @@ function App() {
   return `${day} ${date} ${month} ${year}`
 }
 
-  return (
-    <div className={(typeof weather.main != "undefined") ? (
+  /* this was the original code, updated to function for ease to read and upgrade 
+  <div className={(typeof weather.main != "undefined") ? (
       (weather.main.temp > 70) ? 'App warm' : (weather.main.temp > 40) ? 'App' : 'App Cold') 
-      : 'App cold'}>
+      : 'App cold'}> */
+  return (
+    <div className={BGUpdate(weather.main)}>
       <main>
         
         <div className="search-box">
