@@ -10,10 +10,10 @@ body {
 }
 
 .App{
-  background-image: url('./assets/bg/cold-bg.png');
+  background-image: url('./assets/bg/mid-bg.png');
   background-size: cover;
   background-position: bottom;
-  transition: 0.4 ease-out;
+  transition: 0.4s ease-out;
 }
 
 .App.warm{
@@ -21,8 +21,8 @@ body {
 
 }
 
-.App.mid{
-  background-image: url('./assets/bg/mid-bg.png');
+.App.cold{
+  background-image: url('./assets/bg/cold-bg.png');
 }
 
 main {
@@ -56,4 +56,54 @@ main {
   font-size: 25px;
 
   transition: 0.4s ease;
+}
+
+.location-box .location{
+  color: #fff;
+  font-size: 32px;
+  font-weight: 500px;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.location-box .date{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+}
+
+/*  alignment must act on the box to prevent off set*/
+.weather-box{
+  text-align: center;
+}
+
+.weather-box .temp{
+  position: relative;
+  display: inline-block;
+  margin: 30px auto;
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 15px;
+  box-shadow: 3px 6px rgba(0,0,0,0.2);
+  
+  
+  
+  padding: 15px 25px;
+
+  color: #fff;
+  font-size: 80px;
+  font-weight: 300px;
+
+  text-align: center;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.weather-box .weather{
+  color: #fff;
+  font-size: 50px;
+  font-weight: 300px;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+
 }
